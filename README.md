@@ -1,5 +1,12 @@
 
-# Einfache Steuerung der RA-Achse
+# Einfache Steuerung einer parallaktischen Montierung
+
+* Arduino UNO 
+* L298H Dual H Bridge Driver
+* DS3231 AT24C32 Real Time Clock Module IIC 
+* Stepper
+
+Besonderheit: IRQ-Steuerung zur Verwendung der Real Time Clock (Beta)
 
 ## Berechnung der Steps / Microsteps 
 
