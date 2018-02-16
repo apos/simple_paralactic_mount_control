@@ -1,16 +1,35 @@
 
 # Einfache Steuerung einer parallaktischen Montierung
+Die Betonung des Projektes liegt auf Einfachheit. Der Code wird nicht mehr weiter entwickelt da ich mittlerweile auf eine AstroEQ umgestiegen bin (https://www.astroeq.co.uk/).
+
+## Verwendete Komponenten:
 
 * Arduino UNO 
 * L298H Dual H Bridge Driver
 * DS3231 AT24C32 Real Time Clock Module IIC 
-* Stepper
+* 2 phasiger (!) Stepper max. 12V
+
+## Libraries
+
+* Sodaq library
+
 
 ## Status /Features
 
 * Besonderheit: IRQ-Steuerung zur Verwendung einer Real Time Clock (Beta) korrigiert Ungenauigkeiten des Arduino
 * manuelle Steuerung über Buttons (nur Rektaszenion - West / East) möglich. Geschwindigkeit über 3. Button (Stufen 1-4)
 
+## Anschlusshinweise
+
+* der Stepper wird entsprechend der Anweisungen des L298H an den seitlichen Anschlüssen befestigt
+* der L298H bietet einen 5V Ausgang für den Arduino, wenn 12V angelegt werden (Standard für Astro-Equipment z.B. via Blei-Gel-Akku)
+* Im Verzeichnis "docs" wird im PDF "Arduino Interrupt 2017-10-07.pdf" der Anschluss des IRQ erklärt
+
+## Anpassungen an eigene Montierungen
+
+* Zeile 44: gearWheelToothRAEQ5 (Anzahl der Zähne des Hauptgewinderades, z.B. 144 bei EQ-5 Montierungen)
+* Zeile 55: transmissionRatioRA (Untersetzung durch die Pulleys) und transmissionRatioRAinv (invertiert) - hier z.B. "7.8125" bei einer 1:2 plus einer 1:3.125 Untersetzung. In der Regel (EQ-5) genügt eine 16 Zahn plus 50 Zahn GT-2 Kombination und liefert dann eine Untersetzung von 1:3.125
+* Zeile 60: stepperRADefaultDegreePerStepRA (Grad pro Step, z.B. 0.9, 1.8, ...)
 
 ## Berechnung der Steps / Microsteps 
 
