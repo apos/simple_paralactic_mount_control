@@ -6,7 +6,11 @@
 * DS3231 AT24C32 Real Time Clock Module IIC 
 * Stepper
 
-Besonderheit: IRQ-Steuerung zur Verwendung der Real Time Clock (Beta)
+## Status /Features
+
+* Besonderheit: IRQ-Steuerung zur Verwendung einer Real Time Clock (Beta) korrigiert Ungenauigkeiten des Arduino
+* manuelle Steuerung über Buttons (nur Rektaszenion - West / East) möglich. Geschwindigkeit über 3. Button (Stufen 1-4)
+
 
 ## Berechnung der Steps / Microsteps 
 
