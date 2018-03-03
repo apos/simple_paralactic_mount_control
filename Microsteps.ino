@@ -16,13 +16,13 @@ volatile unsigned int countSeconds = 0;
 volatile unsigned int countMilliSeconds = 0;
 unsigned int intervalSeconds = 0;
 unsigned int intervalMilliSeconds = 0;
-int doStepper = 1;
+intdoStepper = 1;
 
 
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
 // stepper guiding modes
-int guidingMode = 0;
+intguidingMode = 0;
 #define STOP     0
 #define GUIDING  1
 #define EASTx2   2
@@ -44,6 +44,7 @@ unsigned long starTime24hMillisec = 861640910;
 int gearWheelToothRAEQ5 = 144;
 
 // stepper
+// duty will be used as factor how long to wait between microsteps
 long duty = 50;
 unsigned int waitMicroSeconds = 0;
 unsigned int pulseCount = 0;
@@ -52,8 +53,10 @@ unsigned int microsecondsPerStep = 0;
 int deviderRA = 1;
 
 // stepperRA
-const float transmissionRatioRA    = 7.8125;
-const float transmissionRatioRAinv = 0.128;
+
+// Transmission ratio gears (e.g. 16 teeth / 50 teeth => 1:3.125)
+const float transmissionRatioRA  b= 3.125;
+
 // Degrees with the specified stepper rotates in the given microstepmode per microstep
 // will be calculated in setup():
 float stepperRADegreePerStep16MicrostepsRA = 0.0;
