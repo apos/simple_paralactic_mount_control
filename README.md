@@ -1,6 +1,8 @@
 
 # Einfache Steuerung einer parallaktischen Montierung
-Die Betonung des Projektes liegt auf Einfachheit. Der Code wird nicht mehr weiter entwickelt da ich mittlerweile auf eine AstroEQ umgestiegen bin (https://www.astroeq.co.uk/).
+Die Betonung des Projektes liegt auf Einfachheit. Der Code wird nicht mehr weiter entwickelt da ich mittlerweile auf eine OnStep umgestiegen bin (https://onstep.groups.io/g/main).
+
+The Code is very simple. The projekt will not be continued. I am using OnStep (https://onstep.groups.io/g/main) instead.
 
 ## Verwendete Komponenten:
 
